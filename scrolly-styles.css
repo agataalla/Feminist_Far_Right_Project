@@ -1,0 +1,54 @@
+.scrolly-container {
+  margin: 2.5rem 0 4rem;
+  position: relative;
+}
+
+.sticky-thing {
+  background: #05070d;
+  height: 100vh;
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+
+.sticky-thing video,
+.sticky-thing canvas {
+  height: 100vh;
+  object-fit: cover;
+  width: 100%;
+}
+
+.steps-container {
+  margin-top: -100vh;
+  position: relative;
+  z-index: 2;
+}
+
+.step {
+  align-items: center;
+  display: flex;
+  min-height: 100vh;
+  padding: 0 1rem;
+}
+
+.step p {
+  background: rgba(5, 7, 13, 0.82);
+  color: #ffffff;
+  font-size: clamp(1.05rem, 2.5vw, 1.45rem);
+  line-height: 1.5;
+  margin: 0 auto;
+  max-width: 680px;
+  padding: 1.1rem 1.25rem;
+  text-align: left;
+}
+
+@media (max-width: 640px) {
+  .scrolly-container {
+    margin: 1.5rem 0 3rem;
+  }
+
+  .step {
+    padding: 0 0.75rem;
+  }
+}

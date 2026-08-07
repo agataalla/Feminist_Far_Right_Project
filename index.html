@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Parsing the Fear: Collectif Nemesis on Telegram</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+  <link href="scrolly-styles.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --background: #0b0f19;
+      --text: #f5f6fa;
+      --muted: #d7dae5;
+      --accent: #f05349;
+      --caption: #c5c9d8;
+      --footer-bg: #f4f4f4;
+      --footer-text: #272b35;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background-color: var(--background);
+      color: var(--text);
+      font-size: 20px;
+      font-family: Georgia, "Times New Roman", Times, serif;
+      text-rendering: optimizeLegibility;
+    }
+
+    .cartofaf-bg {
+      background-image:
+        radial-gradient(circle at 1px 1px, rgba(242, 255, 0, 0.6) 1px, transparent 1.5px),
+        linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+      background-position: 0 0;
+      background-size: 40px 40px, 40px 40px, 40px 40px;
+    }
+
+    .content {
+      width: min(640px, calc(100% - 2rem));
+      margin: auto;
+    }
+
+    .header {
+      max-width: 900px;
+      padding: 3em 0;
+    }
+
+    a {
+      color: var(--accent);
+    }
+
+    figure {
+      margin: 0;
+      padding-bottom: 1.2em;
+    }
+
+    figcaption {
+      color: var(--caption);
+      font-size: 0.8em;
+      line-height: 1.4;
+      margin: 0.7em auto 0;
+      max-width: 780px;
+      text-align: center;
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: var(--text);
+      font-family: "Lora", Georgia, serif;
+      font-weight: 700;
+      line-height: 1.1;
+    }
+
+    h1 {
+      font-size: clamp(2.35rem, 8vw, 3.4rem);
+      margin: 0 0 0.35em;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 6vw, 3rem);
+      margin: 1.4em 0 0.6em;
+    }
+
+    h3 {
+      font-size: clamp(1.45rem, 5vw, 2rem);
+      margin: 1.3em 0 0.55em;
+    }
+
+    p {
+      color: var(--text);
+      line-height: 1.6;
+      margin: 0;
+      padding-bottom: 1.2em;
+    }
+
+    .subhead,
+    .byline p {
+      color: var(--muted);
+      font-family: "Lora", Georgia, serif;
+    }
+
+    img,
+    video,
+    iframe {
+      max-width: 100%;
+    }
+
+    .full-width {
+      left: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+      position: relative;
+      right: 50%;
+      width: 100vw;
+    }
+
+    .full-width figure {
+      margin: 0;
+      text-align: center;
+      width: 100%;
+    }
+
+    .full-width figure img {
+      display: block;
+      height: auto;
+      width: 100%;
+    }
+
+    .story-image img {
+      display: block;
+      height: auto;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .footer {
+      background: var(--footer-bg);
+      color: var(--footer-text);
+      font-size: 0.8em;
+      margin-top: 4em;
+      padding: 3em 0;
+      text-align: center;
+    }
+
+    .footer p {
+      color: var(--footer-text);
+      padding-bottom: 0;
+      text-align: center;
+    }
+  </style>
+
+  <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/scrolly-video@latest/dist/scrolly-video.js"></script>
+</head>
+
+<body class="cartofaf-bg">
+  <main>
+    <div class="content">
+      <header class="header">
+        <h1>Parsing the Fear: What 2,000 Telegram Messages Reveal About Collectif Nemesis</h1>
+        <p class="subhead">The Women's Right-Wing Extremist Group in France</p>
+      </header>
+
+      <div class="byline">
+        <p>By <a href="https://www.linkedin.com/in/agatha-allain/">Agatha Allain</a></p>
+      </div>
+
+      <p>You open Instagram.</p>
+      <p>Nemesis founder Alice Cordier wanders through a sunny park, playfully chasing a fluffy and stout Pomeranian dog to the tune of California Dreamin'. The camera pans to another member, Yona Faedda, cradling a newborn wrapped in white cotton near the base of a statue.</p>
+      <p>The caption reads: <em>"The enemies of freedom, according to LFI. #ExtremeDanger #BeCareful."</em></p>
+      <p>This depiction of innocence and softness hides a darker side.</p>
+      <p>Founded in 2019, the French group is part of a growing wave of far-right, identitarian women's movements sweeping Europe, alongside groups like Lukreta in Germany, the Pink Ladies in the UK, and the Women's Safety Initiative. Together, they represent the new face of European far-right politics: using gender equality to wrap anti-immigration and Islamophobic agendas in a progressive bow.</p>
+      <p>Nemesis made their public debut by infiltrating a left-wing feminist rally. They carried placards bearing what would quickly become their core slogan: <em>#ForeignRapistsOut.</em></p>
+    </div>
+
+    <section id="scrolly-video" class="scrolly-container" aria-label="Video sequence">
+      <div class="sticky-thing"></div>
+      <div class="steps-container">
+        <div class="step" id="step-first">
+          <p>This year, the group went viral during a visit to far-right political activist Tommy Robinson at a demonstration in London.</p>
+        </div>
+        <div class="step" id="step-second">
+          <p>The members staged themselves wearing burqas, asking the crowd to cheer for them to "take it off."</p>
+        </div>
+        <div class="step" id="step-third">
+          <p>"We are... Alone against the system that wants to destroy our Christian civilisation," said Alice Cordier.</p>
+        </div>
+        <div class="step" id="step-fourth">
+          <p>"It was important for us to show that veils do not have their place in European civilisation," they continued. The post was liked forty thousand times and reshared more than a thousand times on Instagram.</p>
+        </div>
+        <div class="step" id="step-fifth">
+          <p>Baroness Shaista Gohir, CEO of the Muslim Women's Network UK, reacted: "It was deliberate humiliation of Muslim women and a public display of anti-Muslim hostility aimed at reducing their religious dress to a source of ridicule and contempt," she said in an interview with Middle East Eye.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="content">
+      <p>Just one month ago, on July 6th, Yona was convicted and sentenced to a 2000 EUR fine for defaming former Green Party Mayor Anne Vignot; she was found guilty of distributing leaflets of the mayor alongside the caption "Supports foreign rapists." This followed another member's trial last December, when Mila Orriols was fined the same amount for a racist tweet. A picture of founder Alice Cordier doing a Nazi salute was found in 2022. They have since defended themselves against links with Neo-Nazis.</p>
+
+      <h2>What's inside those 2,000+ Telegram messages?</h2>
+      <p>Nemesis claims to be an "association for the protection of women." The right-wing collective insists its sole mission is defending women's rights. We wanted to see if their internal communication matched their public promises.</p>
+      <p>To find out, we analyzed over 2,000 messages from Nemesis's official Telegram channel. We benchmarked our findings against #NousToutes, a prominent left-wing feminist group. The two organizations have been at odds since 2019, when Nemesis members first made headlines by infiltrating a #NousToutes rally. Our analysis revealed two radically different approaches to addressing violence against women.</p>
+
+      <h3>Language of Fear vs. Systemic Critique</h3>
+      <p>Both groups frequently use terms like "women," "victim," and "violence." However, the similarities end there.</p>
+      <p>#NousToutes focuses on systemic issues and political accountability. Its messages target state failure, systemic oppression, and institutional neglect. French President Emmanuel Macron is a frequent target of their criticism. In contrast, Nemesis focuses almost exclusively on graphic, individual physical assaults. The group relies heavily on visceral, triggering language to describe attacks on women and children. A lexical analysis of terms surrounding "violence" exposed a stark contrast: Nemesis routinely uses high-intensity words like knife, rape, barbaric, torture, and murder. The word "murder" appears alongside "rape" 24 times. #NousToutes messages contained zero occurrences of these specific graphic terms.</p>
+      <p>Overall, we found that this Telegram channel cultivates a state of panic, anger, and fear.</p>
+
+      <div class="full-width">
+        <figure>
+          <img src="Artboard 1.png" alt="Highlighted Telegram message excerpts showing perpetrator descriptions and assault descriptions">
+          <figcaption>Excerpt of Telegram messages over the last five years. Highlighted in blue, the description of the perpetrator, and in red, the description of the assault. We found a common theme with foreign perpetrators and the use of graphic language.</figcaption>
+        </figure>
+      </div>
+
+      <h3>Language of Fear vs. Systemic Critique</h3>
+      <p>Nemesis rarely relies on third-party quotes for these descriptions. They write the graphic narratives themselves. They also frequently repost content from Fdesouche, a far-right identitarian news aggregator.</p>
+      <p>While both groups cover high-profile sexual assault cases involving public figures, their daily coverage differs significantly: #NousToutes focuses primarily on public scandals and policy issues. Nemesis systematically amplifies localized assaults involving everyday citizens. A clear pattern emerges in Nemesis's posts: stories regularly feature a foreign perpetrator, a violent and graphic assault, and a young, white victim.</p>
+
+      <h3>Support vs. Rhetoric</h3>
+      <p>Finally, we searched both channels for terms offering concrete support, such as "help," "support," or "helpline." #NousToutes consistently shares direct aid resources, emergency numbers, and partner organizations for victims of sexual violence. In the Nemesis channel, we found no such support resources using the same words.</p>
+
+      <figure class="story-image">
+        <img src="photo_2026-08-04 11.16.18.jpeg" alt="Telegram image from Nemesis Paris">
+        <figcaption>Telegram picture NemesisParis.</figcaption>
+      </figure>
+
+      <h2>55 Neo-Nazis to Just 1 Feminist Channel: Who Really Shares Nemesis Content?</h2>
+    </div>
+
+    <div class="full-width">
+      <div class="flourish-embed flourish-map" data-src="visualisation/29897893">
+        <script src="https://public.flourish.studio/resources/embed.js"></script>
+        <noscript>
+          <img src="https://public.flourish.studio/visualisation/29897893/thumbnail" alt="Map visualization">
+        </noscript>
+      </div>
+    </div>
+
+    <div class="content">
+      <p>Among the Telegram channels that repost Nemesis, only one of them self-identifies as a feminist group. Beyond that exception, most of them do not.</p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="content">
+      <p>Published by Agatha Allain.</p>
+    </div>
+  </footer>
+
+  <script>
+    if (window.ScrollyVideo) {
+      new ScrollyVideo({
+        scrollyVideoContainer: document.querySelector("#scrolly-video .sticky-thing"),
+        src: "Video by alice_cordier_ [DYaFA0UsjVq].mp4",
+        full: true
+      });
+    }
+  </script>
+</body>
+
+</html>
